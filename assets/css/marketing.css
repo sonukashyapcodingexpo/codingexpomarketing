@@ -503,6 +503,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+/* Framework: 2 rows × 3 columns (tablet and up) */
+@media (min-width: 768px) {
+  .process-framework-row > [class*="col-md-4"] {
+    flex: 0 0 auto;
+    width: 33.333333%;
+  }
+}
+
 /* Testimonials */
 .testimonials-section {
   padding: 100px 0;
@@ -548,11 +556,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .client-avatar {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 22%;
   border: 2px solid var(--accent-color);
+  display: block;
+}
+
+/* Owl Carousel sets all .owl-item img to width:100% — keep avatars circular */
+.testislide.owl-carousel .owl-item img.client-avatar {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .client-name {
@@ -993,80 +1021,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 44px;
 }
 
-/* Custom 5-Column Grid Column for Process Framework */
-@media (min-width: 1200px) {
-  .col-xl-2.4 {
-    flex: 0 0 auto;
-    width: 20%;
-  }
-}
-
-/* Footer Locations Grid */
-.footer-locations-heading {
-  font-size: 32px;
-  font-weight: 800;
-}
-.footer-locations-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  margin-bottom: 40px;
-}
-.footer-location-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 25px 15px;
-  border-radius: 10px;
-  text-align: center;
-  min-height: 190px;
-  transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-location-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--accent-hover);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 145, 77, 0.1);
-}
-.footer-location-card i {
-  font-size: 24px;
-  transition: var(--transition-smooth);
-}
-.footer-location-card:hover i {
-  transform: scale(1.2);
-  color: var(--accent-hover) !important;
-}
-.footer-location-card p {
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0;
-}
-.footer-location-card p strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: var(--accent-color);
-}
-
-@media (max-width: 1200px) {
-  .footer-locations-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .footer-locations-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 480px) {
-  .footer-locations-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Additional mobile responsiveness overrides */
 @media (max-width: 768px) {
   html, body {
@@ -1111,13 +1065,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .brand-grid-item span {
     font-size: 14px;
-  }
-  .footer-locations-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .footer-location-card {
-    min-height: auto;
-    padding: 20px;
   }
 }
 
