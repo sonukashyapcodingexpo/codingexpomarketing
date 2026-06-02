@@ -27,6 +27,48 @@
 </head>
 
 <body>
+    <style>
+        .marketing-popup-overlay {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(8, 18, 38, 0.72);
+            z-index: 2000;
+        }
+
+        .marketing-popup-overlay.is-open {
+            display: flex;
+        }
+
+        .marketing-popup-card {
+            position: relative;
+            width: min(100%, 520px);
+            max-height: 92vh;
+            overflow-y: auto;
+            border-radius: 18px;
+            padding: 26px 24px 22px;
+            background: #ffffff;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .marketing-popup-close {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            border: 0;
+            border-radius: 50%;
+            font-size: 22px;
+            line-height: 1;
+            color: #163158;
+            background: #eef5ff;
+            cursor: pointer;
+        }
+    </style>
 
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg marketing-navbar fixed-top">
@@ -55,8 +97,8 @@
                         <a class="nav-link marketing-nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="nav-link btn btn-nav-phone px-4 py-2" href="tel:+919810523316">
-                            <i class="fa fa-phone me-2"></i>+91 98105 23316
+                        <a class="nav-link btn btn-nav-phone px-4 py-2" href="tel:+919643054453">
+                            <i class="fa fa-phone me-2"></i>+91 96430 54453
                         </a>
                     </li>
                 </ul>
@@ -151,29 +193,20 @@
         </div>
     </section>
 
-    <!-- Brands Section -->
-    <section class="brand-ticker-section" id="brands">
-        <div class="container text-center">
-            <div class="heading01" data-aos="fade-up">
-                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">What do these successful businesses have in common?</h5>
-                <h2 class="fw-bold text-gradient mb-5">Strategic Digital Partner Like Us</h2>
+    <!-- SEO Tools Marquee -->
+    <section class="seo-tools-section" id="seo-tools">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">SEO &amp; Marketing Tools</h5>
+                <h2 class="fw-bold text-gradient">Tools We Use For Performance Marketing</h2>
             </div>
-            
-            <div class="brand-grid-container">
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="100"><span>Axis Infoline</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="200"><span>Lets Connect</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="300"><span>Jalsa Ventures</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="400"><span>Zenith Forex</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="500"><span>DC Masala</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="600"><span>Niloni Global</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="700"><span>Gorgeous Grace</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="800"><span>Builtron Homes</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="900"><span>Realty Center</span></div>
-                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="1000"><span>NFC Online</span></div>
-            </div>
-            
-            <div class="mt-5" data-aos="fade-up">
-                <a href="#home" class="btn btn-cta-marketing px-5 py-3">Join The Pack</a>
+            <div class="seo-tools-marquee-rows">
+                <div class="seo-tools-marquee seo-tools-marquee--rtl" aria-label="SEO tools scrolling right to left">
+                    <div class="seo-tools-track" id="seoToolsTrackRtl"></div>
+                </div>
+                <div class="seo-tools-marquee seo-tools-marquee--ltr" aria-label="SEO tools scrolling left to right">
+                    <div class="seo-tools-track" id="seoToolsTrackLtr"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -281,7 +314,7 @@
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="col-12 col-md-6 col-lg-4 order-6" data-aos="fade-right" data-aos-delay="500">
+                <div class="col-12 col-md-6 col-lg-4 order-last" data-aos="fade-right" data-aos-delay="500">
                     <div class="servicebox0001">
                         <div class="service-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <h3>Website Design &amp; <br>Development</h3>
@@ -485,6 +518,52 @@
         </div>
     </section>
 
+    <!-- Full-width enquiry form (above footer) -->
+    <section class="footer-enquiry-section" id="enquiry">
+        <div class="footer-enquiry-inner">
+            <div class="footer-enquiry-header text-center" data-aos="fade-up">
+                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Get In Touch</h5>
+                <h2 class="fw-bold text-gradient mb-2">Let's Get On A Discovery Call</h2>
+                <p class="text-muted mb-0">Have an enquiry? Fill this form — our team will reach out shortly.</p>
+            </div>
+            <form id="footerDiscoveryCallForm" class="footer-enquiry-form" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-enquiry-grid">
+                    <div class="footer-enquiry-field">
+                        <input type="text" name="name" class="form-control discovery-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="footer-enquiry-field">
+                        <input type="tel" name="phone" class="form-control discovery-input" placeholder="Phone Number (10 digits)" maxlength="10" inputmode="numeric" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+                    </div>
+                    <div class="footer-enquiry-field footer-enquiry-field--full">
+                        <input type="email" name="email" class="form-control discovery-input" placeholder="Email Address" required>
+                    </div>
+                    <div class="footer-enquiry-field">
+                        <select name="technology" class="form-select discovery-input" required>
+                            <option value="" disabled selected>Select Service Required</option>
+                            <option value="Complete Digital Marketing Solutions">Complete Digital Marketing Solutions</option>
+                            <option value="Branding & Advertising Solutions">Branding & Advertising Solutions</option>
+                            <option value="Social Media & Influencer Marketing">Social Media & Influencer Marketing</option>
+                            <option value="Search Engine Optimization & AI SEO">Search Engine Optimization & AI SEO</option>
+                            <option value="Paid Marketing (Google, Social & Ecommerce Ads)">Paid Marketing (Google, Social & Ecommerce Ads)</option>
+                            <option value="Website Development">Website Development</option>
+                        </select>
+                    </div>
+                    <div class="footer-enquiry-field">
+                        <select name="budget" class="form-select discovery-input" required>
+                            <option value="" disabled selected>Select Budget Range</option>
+                            <option value="5000 to 25000">INR 5,000 to 25,000</option>
+                            <option value="25000 to 1Lacs">INR 25,000 to 1,00,000</option>
+                            <option value="1Lacs Above">Above INR 1,00,000</option>
+                        </select>
+                    </div>
+                    <div class="footer-enquiry-field footer-enquiry-field--submit">
+                        <button type="submit" class="btn btn-submit-discovery py-3 text-uppercase w-100">Connect With Marketing Team</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="marketing-footer">
         <div class="container">
@@ -514,7 +593,6 @@
                 <div class="col-12 col-lg-4 col-md-6">
                     <h5 class="footer-heading">Contact Info</h5>
                     <ul class="footer-links-list">
-                        <li><i class="fa fa-phone text-gradient-orange me-2"></i> +91 98105 23316</li>
                         <li><i class="fa fa-phone text-gradient-orange me-2"></i> +91 96430 54453</li>
                         <li><i class="fa fa-envelope text-gradient-orange me-2"></i> sales@codingexpo.org</li>
                         <li><i class="fa fa-globe text-gradient-orange me-2"></i> codingexpo.org</li>
@@ -530,11 +608,70 @@
         </div>
     </footer>
 
-    <!-- Floating Actions (WhatsApp, Phone, Email) -->
+    <!-- Floating Actions (Phone, Email, WhatsApp — horizontal) -->
     <div class="floating-actions-bar">
-        <a href="tel:+919810523316" class="floating-btn-item floating-btn-phone" aria-label="Phone Call"><i class="fa fa-phone"></i></a>
-        <a href="https://wa.me/919810523316?text=Hi%20Coding%20Expo,%20I%20want%20to%20enquire%20about%20your%20digital%20marketing%20campaign." target="_blank" class="floating-btn-item floating-btn-whatsapp" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919643054453" class="floating-btn-item floating-btn-phone" aria-label="Phone Call"><i class="fa fa-phone"></i></a>
         <a href="mailto:navneet.sharma@codingexpo.org" class="floating-btn-item floating-btn-email" aria-label="Email Us"><i class="fa fa-envelope"></i></a>
+        <a href="https://wa.me/919643054453?text=Hi%20Coding%20Expo,%20I%20want%20to%20enquire%20about%20your%20digital%20marketing%20campaign." target="_blank" class="floating-btn-item floating-btn-whatsapp" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Hidden Zoho Bigin form (same as codingexpotemplate) -->
+    <form id="BiginWebToRecordForm1225393000000539021" name="BiginWebToRecordForm1225393000000539021"
+        method="POST" action="https://bigin.zoho.in/crm/WebForm" enctype="multipart/form-data"
+        accept-charset="UTF-8" target="hidden1225393000000539021Frame" style="display:none;" aria-hidden="true">
+        <input type="text" style="display:none;" name="xnQsjsdp"
+            value="4a79437fd5c13b7cdcba458310660a02544d22c711a39c02e2ff2e0316ad424a">
+        <input type="hidden" name="zc_gad" id="zc_gad" value="">
+        <input type="text" style="display:none;" name="xmIwtLD"
+            value="63206d183a44079626f7eabd647fa72d8f97fd7925d82c73f0b4281dc8e81ca099e233d93d0a5f196f09ffc006b9adec">
+        <input type="text" style="display:none;" name="actionType" value="Q29udGFjdHM=">
+        <input type="hidden" name="rmsg" id="rmsg" value="true">
+        <input type="text" name="Last Name" id="codingexpoZohoLastName" maxlength="80" value="">
+        <input type="text" name="Phone" id="codingexpoZohoPhone" maxlength="50" value="">
+        <input type="text" name="Email" id="codingexpoZohoEmail" maxlength="100" value="">
+        <textarea name="Description" id="codingexpoZohoDescription" maxlength="32000"></textarea>
+    </form>
+    <iframe id="hidden1225393000000539021Frame" name="hidden1225393000000539021Frame"
+        title="Zoho form submission" style="display:none;" sandbox="allow-forms allow-scripts"></iframe>
+
+    <!-- Enquiry Popup (opens on every refresh/load) -->
+    <div id="marketingEnquiryPopup" class="marketing-popup-overlay" aria-hidden="true">
+        <div class="marketing-popup-card" role="dialog" aria-modal="true" aria-labelledby="popupFormTitle">
+            <button type="button" id="closeMarketingPopup" class="marketing-popup-close" aria-label="Close popup">&times;</button>
+            <h4 id="popupFormTitle" class="fw-bold mb-3 text-gradient">Let's Get On A Discovery Call</h4>
+            <p class="text-muted small mb-4">Have an enquiry? Fill this form — our team will reach out shortly.</p>
+            <form id="popupDiscoveryCallForm">
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control discovery-input" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" name="phone" class="form-control discovery-input" placeholder="Phone Number (10 digits)" maxlength="10" inputmode="numeric" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control discovery-input" placeholder="Email Address" required>
+                </div>
+                <div class="mb-3">
+                    <select name="technology" class="form-select discovery-input" required>
+                        <option value="" disabled selected>Select Service Required</option>
+                        <option value="Complete Digital Marketing Solutions">Complete Digital Marketing Solutions</option>
+                        <option value="Branding & Advertising Solutions">Branding & Advertising Solutions</option>
+                        <option value="Social Media & Influencer Marketing">Social Media & Influencer Marketing</option>
+                        <option value="Search Engine Optimization & AI SEO">Search Engine Optimization & AI SEO</option>
+                        <option value="Paid Marketing (Google, Social & Ecommerce Ads)">Paid Marketing (Google, Social & Ecommerce Ads)</option>
+                        <option value="Website Development">Website Development</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <select name="budget" class="form-select discovery-input" required>
+                        <option value="" disabled selected>Select Budget Range</option>
+                        <option value="5000 to 25000">INR 5,000 to 25,000</option>
+                        <option value="25000 to 1Lacs">INR 25,000 to 1,00,000</option>
+                        <option value="1Lacs Above">Above INR 1,00,000</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-submit-discovery py-3 text-uppercase w-100">Connect With Marketing Team</button>
+            </form>
+        </div>
     </div>
 
     <!-- JS vendors -->
@@ -596,6 +733,49 @@
             }
             initTypewriter("rotatingHeadlineText", phrases);
 
+            // SEO tools marquee (logos from assets/images/companies)
+            const seoToolLogos = [
+                { src: "assets/images/companies/Bing Webmaster Tools.webp", alt: "Bing Webmaster Tools" },
+                { src: "assets/images/companies/GTmetrix.jfif", alt: "GTmetrix" },
+                { src: "assets/images/companies/Google Ads.png", alt: "Google Ads" },
+                { src: "assets/images/companies/Google Analytics.png", alt: "Google Analytics" },
+                { src: "assets/images/companies/Google-Search-Console-WordPress.png", alt: "Google Search Console" },
+                { src: "assets/images/companies/Mailchimp.gif", alt: "Mailchimp" },
+                { src: "assets/images/companies/Majestic.jpg", alt: "Majestic" },
+                { src: "assets/images/companies/Moz.png", alt: "Moz" },
+                { src: "assets/images/companies/Pingdom.png", alt: "Pingdom" },
+                { src: "assets/images/companies/Screaming Frog.jpg", alt: "Screaming Frog" },
+                { src: "assets/images/companies/Ubersuggest.png", alt: "Ubersuggest" },
+                { src: "assets/images/companies/W3C Validator.jpg", alt: "W3C Validator" },
+                { src: "assets/images/companies/Yoast_SEO_logo.png", alt: "Yoast SEO" },
+                { src: "assets/images/companies/canva.jpg", alt: "Canva" },
+                { src: "assets/images/companies/chatgpt-logo-.webp", alt: "ChatGPT" },
+                { src: "assets/images/companies/images.png", alt: "Ahrefs" },
+                { src: "assets/images/companies/se-ranking-logo.jpg", alt: "SE Ranking" },
+                { src: "assets/images/companies/semrush.jfif", alt: "Semrush" },
+                { src: "assets/images/companies/zoho.webp", alt: "Zoho" }
+            ];
+
+            function fillSeoToolsTrack(track) {
+                if (!track || !seoToolLogos.length) return;
+
+                const doubled = seoToolLogos.concat(seoToolLogos);
+                doubled.forEach(function (tool) {
+                    const card = document.createElement("div");
+                    card.className = "seo-tool-card";
+                    const img = document.createElement("img");
+                    img.src = encodeURI(tool.src);
+                    img.alt = tool.alt;
+                    img.loading = "lazy";
+                    img.decoding = "async";
+                    card.appendChild(img);
+                    track.appendChild(card);
+                });
+            }
+
+            fillSeoToolsTrack(document.getElementById("seoToolsTrackRtl"));
+            fillSeoToolsTrack(document.getElementById("seoToolsTrackLtr"));
+
             // Testimonial owl-carousel initialization
             $('.testislide').owlCarousel({
                 loop: true,
@@ -651,59 +831,120 @@
                 });
             });
 
-            // Lead Submission to Webhook & WhatsApp Redirect
+            // Lead submission to Zoho Bigin (same as codingexpotemplate)
+            const ZOHO_FORM_ACTION = "https://bigin.zoho.in/crm/WebForm";
+            const THANKYOU_URL = window.location.protocol === "file:" ? "thankyou.html" : "/thankyou";
             const form = document.getElementById("discoveryCallForm");
-            const pabblyWebhookUrl = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjcwNTZmMDYzZTA0MzY1MjY0NTUzZDUxMzci_pc";
-            const whatsappNumber = "919810523316";
+            const popupForm = document.getElementById("popupDiscoveryCallForm");
+            const footerForm = document.getElementById("footerDiscoveryCallForm");
+            const popupOverlay = document.getElementById("marketingEnquiryPopup");
+            const closePopupBtn = document.getElementById("closeMarketingPopup");
+            const zohoForm = document.getElementById("BiginWebToRecordForm1225393000000539021");
+            const zohoLastName = document.getElementById("codingexpoZohoLastName");
+            const zohoPhone = document.getElementById("codingexpoZohoPhone");
+            const zohoEmail = document.getElementById("codingexpoZohoEmail");
+            const zohoDescription = document.getElementById("codingexpoZohoDescription");
 
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
+            if (zohoForm) {
+                zohoForm.action = ZOHO_FORM_ACTION;
+            }
 
-                if (!form.checkValidity()) {
-                    form.reportValidity();
-                    return;
+            document.querySelectorAll('input[name="phone"]').forEach(function (el) {
+                el.addEventListener("input", function () {
+                    var digits = el.value.replace(/\D/g, "").slice(0, 10);
+                    if (el.value !== digits) {
+                        el.value = digits;
+                    }
+                });
+            });
+
+            function submitLeadToZoho(activeForm, onComplete) {
+                if (!activeForm || !zohoForm || !zohoLastName || !zohoPhone || !zohoEmail || !zohoDescription) {
+                    return false;
                 }
 
-                const name = form.querySelector('[name="name"]').value;
-                const phone = form.querySelector('[name="phone"]').value;
-                const email = form.querySelector('[name="email"]').value;
-                const technology = form.querySelector('[name="technology"]').value;
-                const budget = form.querySelector('[name="budget"]').value;
+                if (!activeForm.checkValidity()) {
+                    activeForm.reportValidity();
+                    return false;
+                }
 
-                const message = [
-                    "Hello Coding Expo, I want an enquiry from the Marketing Landing Page.",
-                    "Name: " + name,
-                    "Phone: " + phone,
-                    "Email: " + email,
-                    "Service Required: " + technology,
-                    "Budget: " + budget
-                ].join("\n");
+                const name = activeForm.querySelector('[name="name"]').value.trim();
+                const phone = activeForm.querySelector('[name="phone"]').value.trim();
+                const email = activeForm.querySelector('[name="email"]').value.trim();
+                const technology = activeForm.querySelector('[name="technology"]').value;
+                const budget = activeForm.querySelector('[name="budget"]').value;
 
-                const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-                
-                const payload = {
-                    source: "codingexpo-marketing-campaign",
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    technology: technology,
-                    budget: budget,
-                    message: message,
-                    submitted_at: new Date().toISOString()
-                };
+                zohoLastName.value = name;
+                zohoPhone.value = phone;
+                zohoEmail.value = email;
+                zohoDescription.value =
+                    "Source: Marketing Landing Page\n" +
+                    "Technology: " + technology + "\n" +
+                    "Budget: " + budget;
 
-                fetch(pabblyWebhookUrl, {
+                const payload = new FormData(zohoForm);
+
+                fetch(ZOHO_FORM_ACTION, {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(payload),
-                    mode: "no-cors"
-                }).catch(function() {
-                    // Ignore error and continue redirect
-                }).finally(function() {
-                    window.open(whatsappUrl, '_blank');
+                    body: payload,
+                    mode: "no-cors",
+                    credentials: "omit"
+                }).catch(function () {
+                    /* no-cors hides errors; lead may still reach Zoho */
+                }).finally(function () {
+                    if (typeof onComplete === "function") {
+                        onComplete();
+                    }
                 });
+
+                return true;
+            }
+
+            function bindLeadForm(activeForm) {
+                if (!activeForm) return;
+                activeForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    if (!submitLeadToZoho(activeForm, function () {
+                        window.location.href = THANKYOU_URL;
+                    })) {
+                        window.alert("Unable to submit your enquiry right now. Please call +91 96430 54453 or email sales@codingexpo.org.");
+                    }
+                });
+            }
+
+            bindLeadForm(form);
+            bindLeadForm(popupForm);
+            bindLeadForm(footerForm);
+
+            function openPopup() {
+                if (!popupOverlay) return;
+                popupOverlay.classList.add("is-open");
+                popupOverlay.setAttribute("aria-hidden", "false");
+            }
+
+            function closePopup() {
+                if (!popupOverlay) return;
+                popupOverlay.classList.remove("is-open");
+                popupOverlay.setAttribute("aria-hidden", "true");
+            }
+
+            if (popupOverlay) {
+                openPopup();
+                popupOverlay.addEventListener("click", function (event) {
+                    if (event.target === popupOverlay) {
+                        closePopup();
+                    }
+                });
+            }
+
+            if (closePopupBtn) {
+                closePopupBtn.addEventListener("click", closePopup);
+            }
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closePopup();
+                }
             });
         })();
     </script>
