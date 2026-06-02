@@ -71,10 +71,80 @@ body {
   100% { transform: translateX(4%) translateY(0) scale(1); }
 }
 
-/* Typography */
+/* Typography — bold + semi-bold heading mix */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
   color: var(--secondary-color);
+}
+
+h1, .h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Section labels (small caps) — semi-bold */
+h5.text-uppercase.text-gradient-orange {
+  font-weight: 600;
+}
+
+/* Main section titles — bold */
+h2.text-gradient,
+h2.process-heading,
+.cta-title,
+.footer-enquiry-header h2,
+.servicebox0001hed h2.display-5 {
+  font-weight: 700;
+}
+
+/* Hero main headline — extra bold */
+.marketing-hero h1.display-4 {
+  font-weight: 800;
+}
+
+/* Form titles — bold */
+.discovery-form-container h4,
+#popupFormTitle,
+h4.fw-bold:not(.process-title) {
+  font-weight: 700;
+}
+
+/* Card / step titles — semi-bold */
+.servicebox0001 h3,
+.process-title,
+.card-pain-title,
+.client-name {
+  font-weight: 600;
+}
+
+.process-section .process-title.fw-bold {
+  font-weight: 600;
+}
+
+.footer-heading {
+  font-weight: 700;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.fw-extrabold,
+.fw-bolder {
+  font-weight: 800 !important;
 }
 
 .text-gradient {
@@ -468,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-pain-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ef4444;
   margin-bottom: 12px;
   display: flex;
@@ -555,6 +625,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .process-heading {
   color: #ffffff;
+  font-weight: 700;
 }
 
 .process-card {
@@ -687,7 +758,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .client-name {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 2px;
 }
 
@@ -722,7 +793,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-title {
   color: #ffffff;
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .btn-cta-marketing {
@@ -853,8 +924,11 @@ h1, h2, h3, h4, h5, h6 {
 .marketing-footer {
   background: var(--bg-dark);
   color: rgba(255, 255, 255, 0.7);
-  padding: 80px 0 30px;
+  padding: 80px 0 0;
+  margin-bottom: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* Reserve space for fixed contact bar — dark bg, no white gap below footer */
+  padding-bottom: 88px;
 }
 
 .footer-heading {
@@ -920,125 +994,98 @@ h1, h2, h3, h4, h5, h6 {
 .footer-bottom-bar {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   margin-top: 50px;
+  margin-bottom: 0;
   padding-top: 30px;
+  padding-bottom: 0;
 }
 
-/* Floating Contact Options — left, center, right (fixed, no bar background) */
-.floating-actions-bar {
+/* Fixed footer contact bar — same as codingexpotemplate */
+.codingexpo-fixed-footerbar {
   position: fixed;
-  bottom: 24px;
   left: 0;
   right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: #ffffff;
+  border-top: 1px solid rgba(53, 163, 255, 0.26);
+  box-shadow: 0 -6px 22px rgba(15, 23, 42, 0.09);
+}
+
+.codingexpo-fixed-footerbar__inner {
+  min-height: 84px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  padding: 10px 0;
+}
+
+.codingexpo-fixed-footerbar__socials {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: stretch;
+  gap: 8px;
+}
+
+.codingexpo-fixed-footerbar__socials .social-icon {
+  width: 100%;
+  min-height: 54px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 0;
+  padding: 6px 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.codingexpo-fixed-footerbar__socials .social-icon img {
+  width: 52px;
   height: 52px;
-  z-index: 999;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  backdrop-filter: none;
+  object-fit: contain;
+  display: block;
   pointer-events: none;
 }
 
-.floating-btn-item {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  min-height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 22px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-  transition: var(--transition-smooth);
-  text-decoration: none;
-  flex-shrink: 0;
-  pointer-events: auto;
-  position: absolute;
-  bottom: 0;
+.codingexpo-fixed-footerbar__socials .social-icon:nth-child(2) img,
+.codingexpo-fixed-footerbar__socials .social-icon:nth-child(3) img {
+  width: 58px;
+  height: 58px;
 }
 
-.floating-actions-bar .floating-btn-phone {
-  left: 28px;
+.codingexpo-fixed-footerbar__socials .social-icon:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
 }
 
-.floating-actions-bar .floating-btn-email {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.floating-actions-bar .floating-btn-whatsapp {
-  right: 28px;
-  left: auto;
-}
-
-.floating-btn-item:hover {
-  animation: none;
-}
-
-.floating-actions-bar .floating-btn-phone:hover,
-.floating-actions-bar .floating-btn-whatsapp:hover {
-  transform: scale(1.12);
-}
-
-.floating-actions-bar .floating-btn-email:hover {
-  transform: translateX(-50%) scale(1.12);
-}
-
-.floating-btn-phone {
-  background: linear-gradient(145deg, #4f8ef7 0%, #2563eb 100%);
-}
-
-.floating-btn-phone:hover {
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
-}
-
-.floating-btn-whatsapp {
-  background: linear-gradient(145deg, #34d058 0%, #25d366 100%);
-}
-
-.floating-btn-whatsapp:hover {
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-}
-
-.floating-btn-email {
-  background: #ffffff;
-  color: #ea4335;
-  border: 2px solid #ea4335;
-  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.2);
-}
-
-.floating-btn-email:hover {
-  color: #ea4335;
-  background: #fff8f7;
-  box-shadow: 0 6px 18px rgba(234, 67, 53, 0.3);
-}
-
-@media (max-width: 576px) {
-  .floating-actions-bar {
-    bottom: 14px;
-    height: 46px;
+@media (max-width: 767px) {
+  .marketing-footer {
+    padding-bottom: 84px;
   }
 
-  .floating-actions-bar .floating-btn-phone {
-    left: 16px;
+  .codingexpo-fixed-footerbar__inner {
+    min-height: 84px;
+    padding: 9px 0;
   }
 
-  .floating-actions-bar .floating-btn-whatsapp {
-    right: 16px;
+  .codingexpo-fixed-footerbar__socials .social-icon {
+    min-height: 48px;
+    padding: 5px 6px;
   }
 
-  .floating-btn-item {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    min-height: 46px;
-    font-size: 20px;
+  .codingexpo-fixed-footerbar__socials .social-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .codingexpo-fixed-footerbar__socials .social-icon:nth-child(2) img,
+  .codingexpo-fixed-footerbar__socials .social-icon:nth-child(3) img {
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -1238,7 +1285,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .servicebox0001 h3 {
   font-size: 22px;
-  font-weight: 750;
+  font-weight: 600;
   color: var(--secondary-color);
   line-height: 1.4;
   margin-bottom: 15px;

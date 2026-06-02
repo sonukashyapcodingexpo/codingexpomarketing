@@ -599,20 +599,25 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="row footer-bottom-bar mt-5 border-top pt-4">
-                <div class="col-md-12 text-center">
-                    <p class="mb-0 small opacity-75">&copy; <span id="currentYear"></span> CodingExpo.org. All rights reserved.</p>
-                </div>
-            </div>
         </div>
     </footer>
 
-    <!-- Floating Actions (Phone, Email, WhatsApp — horizontal) -->
-    <div class="floating-actions-bar">
-        <a href="tel:+919643054453" class="floating-btn-item floating-btn-phone" aria-label="Phone Call"><i class="fa fa-phone"></i></a>
-        <a href="mailto:navneet.sharma@codingexpo.org" class="floating-btn-item floating-btn-email" aria-label="Email Us"><i class="fa fa-envelope"></i></a>
-        <a href="https://wa.me/919643054453?text=Hi%20Coding%20Expo,%20I%20want%20to%20enquire%20about%20your%20digital%20marketing%20campaign." target="_blank" class="floating-btn-item floating-btn-whatsapp" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+    <!-- Fixed contact bar (phone, Gmail, WhatsApp — same as codingexpotemplate) -->
+    <div class="codingexpo-fixed-footerbar" aria-label="Contact actions">
+        <div class="container codingexpo-fixed-footerbar__inner">
+            <div class="codingexpo-fixed-footerbar__socials" aria-label="Phone, email, and WhatsApp">
+                <a href="tel:+919643054453" class="social-icon" aria-label="Call +91 96430 54453">
+                    <img src="assets/codingexpotemplate/icon-phone.png" alt="Call" width="52" height="52" loading="lazy" decoding="async">
+                </a>
+                <a href="mailto:navneet.sharma@codingexpo.org" class="social-icon" aria-label="Email navneet.sharma@codingexpo.org">
+                    <img src="assets/codingexpotemplate/icon-gmail.png" alt="Gmail" width="58" height="58" loading="lazy" decoding="async">
+                </a>
+                <a href="https://wa.me/919643054453?text=Hi%20Coding%20Expo,%20I%20want%20to%20enquire%20about%20your%20digital%20marketing%20campaign."
+                    class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +91 96430 54453">
+                    <img src="assets/codingexpotemplate/icon-whatsapp.png" alt="WhatsApp" width="58" height="58" loading="lazy" decoding="async">
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Hidden Zoho Bigin form (same as codingexpotemplate) -->
@@ -797,9 +802,6 @@
                     }
                 }
             });
-
-            // Dynamic copyright year
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
 
             // Navbar shrink effect on scroll
             window.addEventListener('scroll', function() {
