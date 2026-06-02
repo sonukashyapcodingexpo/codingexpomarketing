@@ -17,7 +17,9 @@
 
     <!-- CSS vendors -->
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
 
     <!-- custom styling -->
@@ -67,25 +69,48 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Content -->
-                <div class="col-lg-7 text-start mb-5 mb-lg-0 wow fadeInLeft" data-wow-duration="1.2s">
-                    <h5 class="text-uppercase fw-bold text-gradient-orange mb-3">Under One Roof</h5>
-                    <h1 class="display-4 fw-extrabold mb-4 text-gradient">
-                        Everything You Need For <br><span class="text-gradient-orange" id="rotatingHeadlineText" style="transition: opacity 0.5s ease-in-out; display: inline-block;">Consistent Growth</span>
+                <div class="col-12 col-lg-7 text-start mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-extrabold mb-4 text-gradient" data-aos="fade-right">
+                        Everything You Need For <br>Consistent <span class="text-gradient-orange" id="rotatingHeadlineText">Business Growth</span>
                     </h1>
-                    <p class="lead mb-4 text-muted">
-                        IT Services & Consulting — Custom websites, online stores, and digital marketing campaigns built to scale your business with confidence.
-                    </p>
-                    <ul class="hero-bullet-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Branding & Advertising Solutions</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Social Media & Influencer Marketing</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Search Engine Optimization & AI SEO</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Paid Marketing (Google, Social & Ecommerce Ads)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Custom Website Design & Development</li>
-                    </ul>
+                    <h5 class="text-uppercase fw-bold text-gradient-orange mb-3" data-aos="fade-right" data-aos-delay="200">Under One Roof</h5>
+                    
+                    <div class="hero-services-grid">
+                        <div class="hero-service-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="hero-service-icon">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <p class="hero-service-text">Branding & <br>Advertising</p>
+                        </div>
+                        <div class="hero-service-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="hero-service-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <p class="hero-service-text">Social Media & <br>Influencer Marketing</p>
+                        </div>
+                        <div class="hero-service-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="hero-service-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <p class="hero-service-text">Search Engine <br>Optimization</p>
+                        </div>
+                        <div class="hero-service-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="hero-service-icon">
+                                <i class="fa-solid fa-rectangle-ad"></i>
+                            </div>
+                            <p class="hero-service-text">Paid Marketing <br>(Google, Meta & Amazon)</p>
+                        </div>
+                        <div class="hero-service-card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="hero-service-icon">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <p class="hero-service-text">Website <br>Development</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Right Discovery Form -->
-                <div class="col-lg-5 wow fadeInRight" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                <div class="col-12 col-lg-5" data-aos="fade-left" data-aos-delay="200">
                     <div class="discovery-form-container">
                         <h4 class="fw-bold mb-3 text-gradient">Let's Get On A Discovery Call</h4>
                         <p class="text-muted small mb-4">Have an enquiry? Fill this form — our team will reach out shortly.</p>
@@ -128,34 +153,27 @@
 
     <!-- Brands Section -->
     <section class="brand-ticker-section" id="brands">
-        <div class="container text-center mb-5">
-            <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Our Success Network</h5>
-            <h2 class="fw-bold text-gradient">Trusted by Growing Brands Globally</h2>
-        </div>
-        <div class="brand-ticker-container">
-            <div class="brand-ticker-track">
-                <!-- Set 1 -->
-                <div class="brand-logo-card"><span>Axis Infoline</span></div>
-                <div class="brand-logo-card"><span>Lets Connect</span></div>
-                <div class="brand-logo-card"><span>Jalsa Ventures</span></div>
-                <div class="brand-logo-card"><span>Zenith Forex</span></div>
-                <div class="brand-logo-card"><span>DC Masala</span></div>
-                <div class="brand-logo-card"><span>Niloni Global</span></div>
-                <div class="brand-logo-card"><span>Gorgeous Grace</span></div>
-                <div class="brand-logo-card"><span>Builtron Homes</span></div>
-                <div class="brand-logo-card"><span>Realty Center</span></div>
-                <div class="brand-logo-card"><span>NFC Online</span></div>
-                <!-- Set 2 (for seamless loop) -->
-                <div class="brand-logo-card"><span>Axis Infoline</span></div>
-                <div class="brand-logo-card"><span>Lets Connect</span></div>
-                <div class="brand-logo-card"><span>Jalsa Ventures</span></div>
-                <div class="brand-logo-card"><span>Zenith Forex</span></div>
-                <div class="brand-logo-card"><span>DC Masala</span></div>
-                <div class="brand-logo-card"><span>Niloni Global</span></div>
-                <div class="brand-logo-card"><span>Gorgeous Grace</span></div>
-                <div class="brand-logo-card"><span>Builtron Homes</span></div>
-                <div class="brand-logo-card"><span>Realty Center</span></div>
-                <div class="brand-logo-card"><span>NFC Online</span></div>
+        <div class="container text-center">
+            <div class="heading01" data-aos="fade-up">
+                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">What do these successful businesses have in common?</h5>
+                <h2 class="fw-bold text-gradient mb-5">Strategic Digital Partner Like Us</h2>
+            </div>
+            
+            <div class="brand-grid-container">
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="100"><span>Axis Infoline</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="200"><span>Lets Connect</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="300"><span>Jalsa Ventures</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="400"><span>Zenith Forex</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="500"><span>DC Masala</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="600"><span>Niloni Global</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="700"><span>Gorgeous Grace</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="800"><span>Builtron Homes</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="900"><span>Realty Center</span></div>
+                <div class="brand-grid-item" data-aos="zoom-in" data-aos-delay="1000"><span>NFC Online</span></div>
+            </div>
+            
+            <div class="mt-5" data-aos="fade-up">
+                <a href="#home" class="btn btn-cta-marketing px-5 py-3">Join The Pack</a>
             </div>
         </div>
     </section>
@@ -163,52 +181,57 @@
     <!-- Why Choose Us -->
     <section class="why-choose-section" id="whychoose">
         <div class="container">
-            <div class="text-center mb-5">
-                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">You Have Found the Right Agency</h5>
-                <h2 class="fw-bold text-gradient">Strategic Partner Tailored to Your Growth</h2>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">You have finally found the right marketing agency</h5>
+                <h2 class="fw-bold text-gradient">Let Us Do the Rest Now!</h2>
             </div>
             <div class="row g-4">
                 <!-- Card 1 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pain-solution-card">
                         <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Aiming for 6x Revenue?</div>
-                        <p class="card-solution-text">Our growth genies will fulfill all your wishes with custom, ROI-centric conversion campaigns.</p>
+                        <p class="card-solution-text">Our growth genies will fulfil all your wishes.</p>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="pain-solution-card">
-                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Boring and Stale Content?</div>
-                        <p class="card-solution-text">Not our cup of tea! We brew fresh & unique copy, design, and ideas for your brand - every time!</p>
+                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Tired of boring and stale content?</div>
+                        <p class="card-solution-text">Not our cup of tea! We brew fresh & unique ideas- every time!</p>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="pain-solution-card">
-                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Failed Executions?</div>
-                        <p class="card-solution-text">Our team has mastery from strategy to deployment, ensuring campaign metrics translate to real-world growth.</p>
+                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Failed executions hurting your campaigns?</div>
+                        <p class="card-solution-text">We wouldn't know much about that. Our team has mastery from strategy to execution.</p>
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="pain-solution-card">
-                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Constant Follow-Ups?</div>
-                        <p class="card-solution-text">Our account managers set their watches ahead of you to deliver reports and assets without any chasing.</p>
+                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Tired of following up on deliverables?</div>
+                        <p class="card-solution-text">Our managers set their watches ahead of you to free you from any chasing.</p>
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="pain-solution-card">
-                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Copy-Paste Strategies?</div>
-                        <p class="card-solution-text">We don't believe in 'one size fits all'. Grow with custom plans built around your unique market and budget.</p>
+                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Copy-paste strategies resulting in zero growth?</div>
+                        <p class="card-solution-text">We don't believe in 'one shoe fits all'. Grow with our customized pair.</p>
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="pain-solution-card">
-                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Empty Promises?</div>
-                        <p class="card-solution-text">We deliver transparent agreements, clear milestone tracking, and measurable business growth you can trust.</p>
+                        <div class="card-pain-title"><i class="fa-solid fa-circle-exclamation"></i> Empty promises hurting your bank?</div>
+                        <p class="card-solution-text">Our commitments will immunize your growth system.</p>
                     </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <a href="#home" class="btn btn-cta-marketing px-5 py-3">Get a 360° Marketing Strategy Made by Experts</a>
                 </div>
             </div>
         </div>
@@ -217,125 +240,58 @@
     <!-- Services Section -->
     <section class="services-section" id="services">
         <div class="container">
-            <div class="text-center mb-5">
-                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Our Capabilities</h5>
-                <h2 class="fw-bold text-gradient">Make Your Marketing More Efficient</h2>
+            <div class="row g-4 align-items-stretch">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4 order-1" data-aos="fade-right" data-aos-delay="100">
+                    <div class="servicebox0001">
+                        <div class="service-card-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>Social Media &amp; <br>Influencer Marketing</h3>
+                        <p><span>350+</span> social media profiles managed with custom content and influencer campaigns</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4 order-2" data-aos="fade-right" data-aos-delay="200">
+                    <div class="servicebox0001">
+                        <div class="service-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3>Search Engine <br>Optimization &amp; AI SEO</h3>
+                        <p><span>5000+</span> keywords and pages ranked on Google Page 1 with AI search optimization</p>
+                    </div>
+                </div>
+                <!-- Card 3 (Title Card - ordered first on mobile, third on desktop) -->
+                <div class="col-12 col-md-6 col-lg-4 order-first order-lg-3 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
+                    <div class="servicebox0001hed text-center text-lg-start w-100">
+                        <h2 class="display-5 fw-extrabold text-gradient mb-2">Our <br>Services</h2>
+                        <p class="text-muted leading-relaxed">Make your marketing more efficient</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-4 order-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="servicebox0001">
+                        <div class="service-card-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+                        <h3>Paid Marketing <br>(Google, Social &amp; eCommerce)</h3>
+                        <p><span>40,000+</span> campaigns run with an average <span>450%</span> ROAS</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-12 col-md-6 col-lg-4 order-5" data-aos="fade-left" data-aos-delay="400">
+                    <div class="servicebox0001">
+                        <div class="service-card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <h3>Branding &amp; <br>Advertising</h3>
+                        <p><span>100+</span> brand transformation journeys crafted to elevate how brands are seen and remembered</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-12 col-md-6 col-lg-4 order-6" data-aos="fade-right" data-aos-delay="500">
+                    <div class="servicebox0001">
+                        <div class="service-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Website Design &amp; <br>Development</h3>
+                        <p><span>2000+</span> websites developed with modern design, responsive layouts &amp; creative content</p>
+                    </div>
+                </div>
             </div>
-
-            <!-- Custom Tabs Navigation -->
-            <ul class="nav nav-tabs service-nav-tabs" id="servicesTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link service-tab-btn active" id="social-tab" data-bs-toggle="tab" data-bs-target="#social-pane" type="button" role="tab" aria-controls="social-pane" aria-selected="true">Social & Influencer</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link service-tab-btn" id="seo-tab" data-bs-toggle="tab" data-bs-target="#seo-pane" type="button" role="tab" aria-controls="seo-pane" aria-selected="false">SEO & AI SEO</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link service-tab-btn" id="paid-tab" data-bs-toggle="tab" data-bs-target="#paid-pane" type="button" role="tab" aria-controls="paid-pane" aria-selected="false">Paid Marketing</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link service-tab-btn" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding-pane" type="button" role="tab" aria-controls="branding-pane" aria-selected="false">Branding</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link service-tab-btn" id="web-tab" data-bs-toggle="tab" data-bs-target="#web-pane" type="button" role="tab" aria-controls="web-pane" aria-selected="false">Website Design & Dev</button>
-                </li>
-            </ul>
-
-            <!-- Tabs Content -->
-            <div class="tab-content" id="servicesTabContent">
-                <!-- Social Media -->
-                <div class="tab-pane fade show active" id="social-pane" role="tabpanel" aria-labelledby="social-tab" tabindex="0">
-                    <div class="service-tab-content-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <span class="service-stat-badge">350+ Social Media Profiles Managed</span>
-                                <h3 class="fw-bold mb-3">Social Media & Influencer Marketing</h3>
-                                <p class="text-muted leading-relaxed mb-4">
-                                    We design custom content calendars, manage community engagement, and launch high-impact influencer campaigns that build authority and drive social conversions.
-                                </p>
-                                <a href="#home" class="btn btn-submit-discovery d-inline-block w-auto px-5 py-3">Get Custom Strategy</a>
-                            </div>
-                            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                                <img src="assets/codingexpotemplate/feature-2.png" alt="Social Media Marketing" class="service-tab-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SEO -->
-                <div class="tab-pane fade" id="seo-pane" role="tabpanel" aria-labelledby="seo-tab" tabindex="0">
-                    <div class="service-tab-content-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <span class="service-stat-badge">5000+ Keywords Ranked on Page 1</span>
-                                <h3 class="fw-bold mb-3">Search Engine Optimization & AI SEO</h3>
-                                <p class="text-muted leading-relaxed mb-4">
-                                    Combine traditional high-quality link building and content optimization with state-of-the-art AI-driven search visibility tools to stay ahead of Google algorithm updates.
-                                </p>
-                                <a href="#home" class="btn btn-submit-discovery d-inline-block w-auto px-5 py-3">Audit My Website</a>
-                            </div>
-                            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                                <img src="assets/codingexpotemplate/feature-1.png" alt="SEO Solutions" class="service-tab-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Paid Marketing -->
-                <div class="tab-pane fade" id="paid-pane" role="tabpanel" aria-labelledby="paid-tab" tabindex="0">
-                    <div class="service-tab-content-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <span class="service-stat-badge">40,000+ Campaigns with 450% Avg. ROAS</span>
-                                <h3 class="fw-bold mb-3">Paid Marketing (Google, Social & eCommerce)</h3>
-                                <p class="text-muted leading-relaxed mb-4">
-                                    Maximize every ad dollar. Our optimization experts execute smart search, shopping, display, and retargeting campaigns on Google, Meta, and marketplaces for instant lead generation.
-                                </p>
-                                <a href="#home" class="btn btn-submit-discovery d-inline-block w-auto px-5 py-3">Start PPC Campaign</a>
-                            </div>
-                            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                                <img src="assets/codingexpotemplate/feature-3.png" alt="Paid Ads" class="service-tab-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Branding -->
-                <div class="tab-pane fade" id="branding-pane" role="tabpanel" aria-labelledby="branding-tab" tabindex="0">
-                    <div class="service-tab-content-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <span class="service-stat-badge">100+ Brand Transformation Journeys</span>
-                                <h3 class="fw-bold mb-3">Branding & Identity Advertising</h3>
-                                <p class="text-muted leading-relaxed mb-4">
-                                    Build a brand that commands attention. From logo creation and corporate design systems to creative messaging, we construct unified visual frameworks.
-                                </p>
-                                <a href="#home" class="btn btn-submit-discovery d-inline-block w-auto px-5 py-3">Explore Branding Services</a>
-                            </div>
-                            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                                <img src="assets/codingexpotemplate/hero-accent.png" alt="Branding Campaigns" class="service-tab-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Dev -->
-                <div class="tab-pane fade" id="web-pane" role="tabpanel" aria-labelledby="web-tab" tabindex="0">
-                    <div class="service-tab-content-wrapper">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <span class="service-stat-badge">2000+ Websites & Apps Completed</span>
-                                <h3 class="fw-bold mb-3">Website Design & Custom Development</h3>
-                                <p class="text-muted leading-relaxed mb-4">
-                                    High-performance digital experiences built using WordPress, Shopify, and the MERN stack. We prioritize conversion rate optimization, responsive structures, and security.
-                                </p>
-                                <a href="#home" class="btn btn-submit-discovery d-inline-block w-auto px-5 py-3">Build My Website</a>
-                            </div>
-                            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                                <img src="assets/codingexpotemplate/hero-main.png" alt="Web Development" class="service-tab-img">
-                            </div>
-                        </div>
-                    </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <a href="#home" class="btn btn-cta-marketing px-5 py-3">Pick the services your business requires</a>
                 </div>
             </div>
         </div>
@@ -344,49 +300,54 @@
     <!-- Process Section -->
     <section class="process-section" id="process">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Our Framework</h5>
-                <h2 class="fw-bold process-heading">Reach! Engage! Sell! Repeat!</h2>
+                <h2 class="fw-bold process-heading text-white">Reach! Engage! Sell! Repeat!</h2>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <!-- Step 1 -->
-                <div class="col-md-6 col-lg-4 col-xl-2.4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2.4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="process-card">
                         <div class="process-number">01</div>
+                        <div class="process-icon mb-3"><i class="fa-solid fa-bullhorn fa-2x text-gradient-orange"></i></div>
                         <h4 class="process-title fw-bold">Brand Awareness</h4>
                         <p class="process-desc">Let’s spread the word! Build strong market penetration.</p>
                     </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="col-md-6 col-lg-4 col-xl-2.4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2.4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="process-card">
                         <div class="process-number">02</div>
+                        <div class="process-icon mb-3"><i class="fa-solid fa-users fa-2x text-gradient-orange"></i></div>
                         <h4 class="process-title fw-bold">Traffic &amp; Engagement</h4>
                         <p class="process-desc">Make your audience fall in love with your products or services.</p>
                     </div>
                 </div>
                 <!-- Step 3 -->
-                <div class="col-md-6 col-lg-4 col-xl-2.4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2.4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="process-card">
                         <div class="process-number">03</div>
-                        <h4 class="process-title fw-bold">Retarget &amp; Convert</h4>
-                        <p class="process-desc">Drive prospects through custom funnels until they click pay.</p>
+                        <div class="process-icon mb-3"><i class="fa-solid fa-crosshairs fa-2x text-gradient-orange"></i></div>
+                        <h4 class="process-title fw-bold">Advertise &amp; Retarget</h4>
+                        <p class="process-desc">Chase your customer all over the internet and make them hit "Pay Now".</p>
                     </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="col-md-6 col-lg-4 col-xl-2.4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2.4" data-aos="zoom-in" data-aos-delay="400">
                     <div class="process-card">
                         <div class="process-number">04</div>
-                        <h4 class="process-title fw-bold">Retention Engine</h4>
-                        <p class="process-desc">Keep your customers returning and buying again and again.</p>
+                        <div class="process-icon mb-3"><i class="fa-solid fa-heart fa-2x text-gradient-orange"></i></div>
+                        <h4 class="process-title fw-bold">Retention</h4>
+                        <p class="process-desc">Keep making your customers come back to you again and again.</p>
                     </div>
                 </div>
                 <!-- Step 5 -->
-                <div class="col-md-6 col-lg-4 col-xl-2.4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-2.4" data-aos="zoom-in" data-aos-delay="500">
                     <div class="process-card">
                         <div class="process-number">05</div>
-                        <h4 class="process-title fw-bold">Scale &amp; Grow</h4>
-                        <p class="process-desc">Collect business revenue and grow market share 365 days a year.</p>
+                        <div class="process-icon mb-3"><i class="fa-solid fa-chart-line fa-2x text-gradient-orange"></i></div>
+                        <h4 class="process-title fw-bold">Consistent Growth</h4>
+                        <p class="process-desc">Get busy collecting revenue and scaling your brand 365 days a year.</p>
                     </div>
                 </div>
             </div>
@@ -395,158 +356,121 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="text-center mb-5">
                 <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Words Of Wisdom</h5>
                 <h2 class="fw-bold text-gradient">Feedback From Business Owners</h2>
             </div>
-            <div class="row g-4">
-                <!-- Testimonial 1 -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-card-custom">
-                        <div>
-                            <div class="stars-rating">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            </div>
-                            <p class="quote-text">"Coding Expo helped us modernize our website and improve lead quality. Their execution was fast, transparent, and business-focused."</p>
-                        </div>
-                        <div class="client-info-wrapper mt-3">
-                            <img src="assets/images/Screenshot 2026-05-04 at 19.15.17.png" alt="Sam Bedi" class="client-avatar" onerror="this.src='assets/codingexpotemplate/testimonial-1.jpg'">
+            
+            <div class="testislider">
+                <div class="owl-carousel owl-theme testislide">
+                    <!-- Testimonial 1 -->
+                    <div class="item">
+                        <div class="testimonial-card-custom m-2">
                             <div>
-                                <h6 class="client-name">Sam Bedi</h6>
-                                <p class="client-role">Founder, Realty Center</p>
+                                <div class="stars-rating mb-3">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                                <p class="quote-text">"Coding Expo helped us modernize our website and improve lead quality. Their execution was fast, transparent, and business-focused."</p>
+                            </div>
+                            <div class="client-info-wrapper mt-3">
+                                <img src="assets/images/Screenshot 2026-05-04 at 19.15.17.png" alt="Sam Bedi" class="client-avatar" onerror="this.src='assets/codingexpotemplate/testimonial-1.jpg'">
+                                <div>
+                                    <h6 class="client-name">Sam Bedi</h6>
+                                    <p class="client-role text-muted small">Founder, Realty Center</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="item">
+                        <div class="testimonial-card-custom m-2">
+                            <div>
+                                <div class="stars-rating mb-3">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                                <p class="quote-text">"From strategy to SEO execution, the team consistently delivered measurable growth. Communication and turnaround time were excellent."</p>
+                            </div>
+                            <div class="client-info-wrapper mt-3">
+                                <img src="assets/images/ChatGPT Image May 4, 2026, 07_03_22 PM.png" alt="Sundram Prakash" class="client-avatar" onerror="this.src='assets/codingexpotemplate/testimonial-2.jpg'">
+                                <div>
+                                    <h6 class="client-name">Sundram Prakash</h6>
+                                    <p class="client-role text-muted small">Marketing Head, Out Thought Taxation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="item">
+                        <div class="testimonial-card-custom m-2">
+                            <div>
+                                <div class="stars-rating mb-3">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                                <p class="quote-text">"Their team understood our goals quickly and built a clean, high-performing digital presence that supports our sales pipeline."</p>
+                            </div>
+                            <div class="client-info-wrapper mt-3">
+                                <img src="assets/codingexpotemplate/testimonial-3.jpg" alt="Arun Sakalya" class="client-avatar">
+                                <div>
+                                    <h6 class="client-name">Arun Sakalya</h6>
+                                    <p class="client-role text-muted small">Founder, Lets Connect LLP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="item">
+                        <div class="testimonial-card-custom m-2">
+                            <div>
+                                <div class="stars-rating mb-3">
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <i class="fa fa-star text-warning"></i>
+                                </div>
+                                <p class="quote-text">"Coding Expo delivered exactly what we needed: a professional website, stronger visibility, and reliable support whenever required."</p>
+                            </div>
+                            <div class="client-info-wrapper mt-3">
+                                <img src="assets/codingexpotemplate/testimonial-2.jpg" alt="Kulwinder Kaur" class="client-avatar">
+                                <div>
+                                    <h6 class="client-name">Kulwinder Kaur</h6>
+                                    <p class="client-role text-muted small">Business Head, Five River Suppliers</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="testimonial-card-custom">
-                        <div>
-                            <div class="stars-rating">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            </div>
-                            <p class="quote-text">"From strategy to SEO execution, the team consistently delivered measurable growth. Communication and turnaround time were excellent."</p>
-                        </div>
-                        <div class="client-info-wrapper mt-3">
-                            <img src="assets/images/ChatGPT Image May 4, 2026, 07_03_22 PM.png" alt="Sundram Prakash" class="client-avatar" onerror="this.src='assets/codingexpotemplate/testimonial-2.jpg'">
-                            <div>
-                                <h6 class="client-name">Sundram Prakash</h6>
-                                <p class="client-role">Marketing Head, Out Thought Taxation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="testimonial-card-custom">
-                        <div>
-                            <div class="stars-rating">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            </div>
-                            <p class="quote-text">"Their team understood our goals quickly and built a clean, high-performing digital presence that supports our sales pipeline."</p>
-                        </div>
-                        <div class="client-info-wrapper mt-3">
-                            <img src="assets/codingexpotemplate/testimonial-3.jpg" alt="Arun Sakalya" class="client-avatar">
-                            <div>
-                                <h6 class="client-name">Arun Sakalya</h6>
-                                <p class="client-role">Founder, Lets Connect LLP</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="testimonial-card-custom">
-                        <div>
-                            <div class="stars-rating">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            </div>
-                            <p class="quote-text">"Coding Expo delivered exactly what we needed: a professional website, stronger visibility, and reliable support whenever required."</p>
-                        </div>
-                        <div class="client-info-wrapper mt-3">
-                            <img src="assets/codingexpotemplate/testimonial-2.jpg" alt="Kulwinder Kaur" class="client-avatar">
-                            <div>
-                                <h6 class="client-name">Kulwinder Kaur</h6>
-                                <p class="client-role">Business Head, Five River Suppliers</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <a href="#home" class="btn btn-cta-marketing px-5 py-3">Get Ready For Your Success Story</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Banner Section -->
-    <section class="cta-banner-section text-center">
+    <section class="cta-banner-section text-center" data-aos="zoom-in">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 wow zoomIn">
+                <div class="col-12 col-lg-8">
                     <h2 class="cta-title mb-4">Ready To Speed Up Your Business Growth?</h2>
                     <p class="lead mb-4 opacity-75">Work with our expert marketing and development team to craft custom strategies that yield predictable results.</p>
-                    <a href="#home" class="btn btn-cta-marketing">Connect With Experts Now!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Locations -->
-    <section class="locations-section" id="locations">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h5 class="text-uppercase fw-bold text-gradient-orange mb-2">Our Presence</h5>
-                <h2 class="fw-bold text-gradient">Global Footprint, Local Support</h2>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <!-- Location 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card text-center">
-                        <div class="location-icon-wrapper mx-auto">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h4 class="location-name">India (HQ)</h4>
-                        <p class="location-address">Udyog Marg, C-89c, 2nd Floor, Sector 8, Noida, Uttar Pradesh 201301</p>
-                    </div>
-                </div>
-                <!-- Location 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card text-center">
-                        <div class="location-icon-wrapper mx-auto">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h4 class="location-name">Dubai</h4>
-                        <p class="location-address">The Curve Building, Mezzanine Floor, Sheikh Zayed Rd, Al Quoz 3, Dubai, UAE</p>
-                    </div>
-                </div>
-                <!-- Location 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card text-center">
-                        <div class="location-icon-wrapper mx-auto">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h4 class="location-name">England</h4>
-                        <p class="location-address">42 Brunswick Terrace, Hove, East Sussex BN3 1HA, United Kingdom</p>
-                    </div>
-                </div>
-                <!-- Location 4 -->
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="location-card text-center">
-                        <div class="location-icon-wrapper mx-auto">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h4 class="location-name">United States</h4>
-                        <p class="location-address">1317 Edgewater Dr, Suite 897, Orlando, Florida 32804, USA</p>
-                    </div>
-                </div>
-                <!-- Location 5 -->
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="location-card text-center">
-                        <div class="location-icon-wrapper mx-auto">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h4 class="location-name">Australia</h4>
-                        <p class="location-address">83 York St, Suite 109, Level 1, Sydney, New South Wales 2000, Australia</p>
-                    </div>
+                    <a href="#home" class="btn btn-cta-marketing px-5 py-3">Connect With Experts Now!</a>
                 </div>
             </div>
         </div>
@@ -556,7 +480,7 @@
     <footer class="marketing-footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-5 col-md-12">
+                <div class="col-12 col-lg-5 col-md-12">
                     <img src="assets/codingexpotemplate/codingexpo-logo.png" alt="Coding Expo Logo" height="50" class="mb-4">
                     <p class="pe-lg-5">
                         Coding Expo builds responsive websites, high-converting stores, and search marketing campaigns that scale with predictability and compliance.
@@ -568,7 +492,7 @@
                         <a href="https://wa.me/919643054453" target="_blank" class="social-circle-btn"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-12 col-lg-3 col-md-6">
                     <h5 class="footer-heading">Quick Navigation</h5>
                     <ul class="footer-links-list">
                         <li><a href="#home">Home</a></li>
@@ -576,10 +500,9 @@
                         <li><a href="#services">Our Services</a></li>
                         <li><a href="#whychoose">Why Choose Us</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#locations">Our Presence</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12 col-lg-4 col-md-6">
                     <h5 class="footer-heading">Contact Info</h5>
                     <ul class="footer-links-list">
                         <li><i class="fa fa-phone text-gradient-orange me-2"></i> +91 98105 23316</li>
@@ -589,6 +512,43 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Footer Locations -->
+            <div class="row mt-5 border-top pt-5">
+                <div class="col-12">
+                    <div class="footer-locations" data-aos="fade-up">
+                        <h3 class="footer-locations-heading text-center text-white mb-4">Our Locations</h3>
+                        <div class="footer-locations-grid">
+                            <!-- Noida -->
+                            <div class="footer-location-card noida" data-aos="zoom-in" data-aos-delay="100">
+                                <i class="fa-solid fa-location-dot mb-3 text-gradient-orange"></i>
+                                <p><strong>Noida</strong>Udyog Marg, C-89c, <br>2nd Floor, Sector 8, Noida, <br>Uttar Pradesh 201301, IN</p>
+                            </div>
+                            <!-- Dubai -->
+                            <div class="footer-location-card dubai" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="fa-solid fa-location-dot mb-3 text-gradient-orange"></i>
+                                <p><strong>Dubai</strong>The Curve Building, Mezzanine Floor, Sheikh Zayed Rd, Al Quoz 3, Dubai, UAE</p>
+                            </div>
+                            <!-- England -->
+                            <div class="footer-location-card england" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fa-solid fa-location-dot mb-3 text-gradient-orange"></i>
+                                <p><strong>England</strong>42 Brunswick Terrace, <br>Hove, East Sussex BN3 <br>1HA, UK</p>
+                            </div>
+                            <!-- United States -->
+                            <div class="footer-location-card unitedstates" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fa-solid fa-location-dot mb-3 text-gradient-orange"></i>
+                                <p><strong>United States</strong>1317 Edgewater Dr, <br>Suite 897, Orlando, Florida <br>32804, USA</p>
+                            </div>
+                            <!-- Australia -->
+                            <div class="footer-location-card australia" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fa-solid fa-location-dot mb-3 text-gradient-orange"></i>
+                                <p><strong>Australia</strong>83 York St, Suite 109, Level 1, <br>Sydney, New South Wales <br>2000, AU</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="row footer-bottom-bar">
                 <div class="col-md-12 text-center">
                     <p class="mb-0 small opacity-75">&copy; <span id="currentYear"></span> CodingExpo.org. All rights reserved.</p>
@@ -607,34 +567,83 @@
     <!-- JS vendors -->
     <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
 
     <!-- Custom Page Script -->
     <script>
         (function () {
-            // Start WOW Animations
-            new WOW().init();
+            // Start AOS Animations
+            AOS.init({
+                easing: 'ease-out-back',
+                duration: 1000
+            });
 
-            // Rotating Headline Text logic
+            // Typewriter Headline Text logic
             const phrases = [
-                "Consistent Growth",
-                "6x Revenue Goals",
-                "High-Performing Sites",
-                "Top SEO Rankings",
-                "Maximum Ad ROAS"
+                "Business Growth",
+                "Revenue Generation",
+                "Google Ranking",
+                "Online Engagement"
             ];
-            let phraseIndex = 0;
-            const targetText = document.getElementById("rotatingHeadlineText");
-            if (targetText) {
-                setInterval(() => {
-                    targetText.style.opacity = 0;
-                    setTimeout(() => {
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                        targetText.textContent = phrases[phraseIndex];
-                        targetText.style.opacity = 1;
-                    }, 500);
-                }, 3000);
+            function initTypewriter(elementId, words, speed = 80, delay = 2000) {
+                const el = document.getElementById(elementId);
+                if (!el) return;
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                
+                function type() {
+                    const currentWord = words[wordIndex];
+                    if (isDeleting) {
+                        el.textContent = currentWord.substring(0, charIndex - 1);
+                        charIndex--;
+                    } else {
+                        el.textContent = currentWord.substring(0, charIndex + 1);
+                        charIndex++;
+                    }
+                    
+                    let typeSpeed = speed;
+                    if (isDeleting) {
+                        typeSpeed /= 2; // Delete faster
+                    }
+                    
+                    if (!isDeleting && charIndex === currentWord.length) {
+                        typeSpeed = delay; // Pause at end of word
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        typeSpeed = 300; // Pause before typing next word
+                    }
+                    
+                    setTimeout(type, typeSpeed);
+                }
+                type();
             }
+            initTypewriter("rotatingHeadlineText", phrases);
+
+            // Testimonial owl-carousel initialization
+            $('.testislide').owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                nav: false,
+                dots: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    1024: {
+                        items: 3,
+                    }
+                }
+            });
 
             // Dynamic copyright year
             document.getElementById("currentYear").textContent = new Date().getFullYear();
